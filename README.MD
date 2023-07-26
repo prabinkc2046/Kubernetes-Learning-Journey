@@ -10,7 +10,7 @@ In this project, I will be sharing my experiences, learnings, and experiments wi
 
 ## Table of Contents
 
-1. [Kubernetes Concept-Pod ReplicaSet Deployment](./FLASK-HELLO-WORLD-DEPLOYMENT/README.md)
+1. [Kubernetes Concept-Pod ReplicaSet Deployment](Flask-Hello-World-Deployment/README.md)
 
 ## Getting Started
 
