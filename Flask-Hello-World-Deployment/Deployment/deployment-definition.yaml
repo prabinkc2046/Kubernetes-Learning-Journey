@@ -2,13 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-hello-world-deployment
-  labels:
-    app: flask-hello-world
 spec:
   selector:
     matchLabels:
       app: flask-hello-world
-  replicas: 5
   template:
     metadata:
       name: flask-hello-world-pod
@@ -18,6 +15,6 @@ spec:
       containers:
         - name: flask-hello-world-container
           image: prabinkc/flask-hello-world
-
+  replicas: 4
 
     

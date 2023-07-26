@@ -2,12 +2,11 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: flask-hello-world-replicaset
-  labels:
-    app: flask-hello-world
 spec:
   selector:
     matchLabels:
       app: flask-hello-world
+  replicas: 5
   template:
     metadata:
       name: flask-hello-world-pod
@@ -16,8 +15,9 @@ spec:
     spec:
       containers:
         - name: flask-hello-world-container
-          image: prabinkc/flask-hello-world
-  replicas: 3
-
+          image: prabinkc/flask-hello-world    
 
       
+
+
+

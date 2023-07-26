@@ -8,5 +8,3 @@ spec:
   containers:
     - name: flask-hello-world-container
       image: prabinkc/flask-hello-world
-
-

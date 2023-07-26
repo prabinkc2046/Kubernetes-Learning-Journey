@@ -1,16 +1,8 @@
-# Kubernetes Concept
-
-In this demo, I will demonstrate the concept I learnt after taking training on
-the kubernetes from KodeKloud.
-
-We will deploy my containerized flask app that says: Hello world when it is 
-accessed from the browser.
+# Deploying Flask-Hello-World Using Kubernetes Concept
 
 ## Pod
 
-Pod is the smallest unit of Kubernetes architecture.
-
-YAML defintion to create a Pod object:
+Yaml file for our desired Pod.
 
 ```
 apiVersion: v1
@@ -21,34 +13,31 @@ metadata:
     app: flask-hello-world
 spec:
   containers:
-    - name: flask-hello-world-pod
+    - name: flask-hello-world-container
       image: prabinkc/flask-hello-world
+
 ```
 
-
-To create a pod using this definition, run:
+To create a Pod using this manifest file, run:
 
 ```
 kubectl create -f pod-definition.yaml
 ```
-This will create a pod named flask-hello-world-pod pulling an image prabinkc/flask-hello-world.
-
 
 ## ReplicaSet
 
-The yaml defintion to create a desired state of pods at all time:
+Yaml file for ReplicaSet
 
 ```
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: flask-hello-world-replicaset
-  labels:
-    app: flask-hello-world
 spec:
   selector:
     matchLabels:
       app: flask-hello-world
+  replicas: 5
   template:
     metadata:
       name: flask-hello-world-pod
@@ -56,31 +45,28 @@ spec:
         app: flask-hello-world
     spec:
       containers:
-        - name: flask-hello-world-pod
+        - name: flask-hello-world-container
           image: prabinkc/flask-hello-world    
-```
 
-To create a replicaset object, run:
 ```
-kubectl create -f replicaset-def.yaml
+To create a ReplicaSet, run:
+```
+kubectl create -f replicaset-definition.yaml
 ```
 
 ## Deployment
 
-Defintion for creating a deployment object:
+Yaml file to create a deployment
 
 ```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-hello-world-deployment
-  labels:
-    app: flask-hello-world
 spec:
   selector:
     matchLabels:
       app: flask-hello-world
-  replicas: 6
   template:
     metadata:
       name: flask-hello-world-pod
@@ -88,14 +74,14 @@ spec:
         app: flask-hello-world
     spec:
       containers:
-        - name: flask-hello-world-pod
+        - name: flask-hello-world-container
           image: prabinkc/flask-hello-world
+  replicas: 4
+
+ ```
+To create a deployment object, run:
+
 ```
-
-
-
-
-
-
-
+kubectl crate -f deployment-definition.yaml
+```
 
