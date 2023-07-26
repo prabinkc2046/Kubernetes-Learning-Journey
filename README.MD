@@ -10,20 +10,7 @@ In this project, I will be sharing my experiences, learnings, and experiments wi
 
 ## Table of Contents
 
-1. [Pods](./K8s-concept/README.md)
-2. [ReplicaSets](./docs/replicasets.md)
-3. [Deployments](./docs/deployments.md)
-4. [Services](./docs/services.md)
-5. [ConfigMaps](./docs/configmaps.md)
-6. [Secrets](./docs/secrets.md)
-7. [Persistent Volumes](./docs/persistent-volumes.md)
-8. [Namespaces](./docs/namespaces.md)
-9. [Ingress](./docs/ingress.md)
-10. [Helm Charts](./docs/helm-charts.md)
-11. [Kubernetes API](./docs/kubernetes-api.md)
-12. [Kustomize](./docs/kustomize.md)
-13. [Kubernetes Networking](./docs/kubernetes-networking.md)
-14. [Kubernetes Security](./docs/kubernetes-security.md)
+1. [Kubernetes Concept-Pod ReplicaSet Deployment](./K8s-concept/README.md)
 
 ## Getting Started
 
