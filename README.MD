@@ -10,7 +10,7 @@ In this project, I will be sharing my experiences, learnings, and experiments wi
 
 ## Table of Contents
 
-1. [Pods](./docs/pods.md)
+1. [Pods](./K8s-concept/README.md)
 2. [ReplicaSets](./docs/replicasets.md)
 3. [Deployments](./docs/deployments.md)
 4. [Services](./docs/services.md)
