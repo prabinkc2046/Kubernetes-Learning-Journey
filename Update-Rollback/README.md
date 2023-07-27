@@ -4,12 +4,10 @@ This repository demonstrates how to perform updates and rollbacks on a Kubernete
 ## Prerequisites
 Before proceeding, ensure you have the following installed:
 
-- [Minikube](https://minikube.sigs.k8s.io/docs/start/)
+[Minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 ## Creating and Deploying the Application
-
 Clone this repository and navigate to the project directory.
-
 Build the Docker image for the initial version of the application:
 
 ```
@@ -39,9 +37,7 @@ kubectl describe deployment hello-world-app
 ## Updating the Application
 
 Suppose you want to add a new feature or make changes to the application. Here's how to update it:
-
 Make the necessary changes to the application code.
-
 Build and push the updated Docker image:
 
 ```
@@ -57,9 +53,7 @@ kubectl edit deployment hello-world-app
 ```
 
 Within the spec section of the template of the Pod, change the image field to prabinkc/app:v2.
-
 Save the changes and exit the editor.
-
 Check the status of the update:
 
 ```
