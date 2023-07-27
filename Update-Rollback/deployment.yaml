@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-app
+spec:
+  selector:
+    matchLabels:
+      app: hello-world
+  replicas: 5
+  template:
+    metadata:
+      name: hello-world-app
+      labels:
+        app: hello-world
+    spec:
+      containers:
+        - name: hello-world-container
+          image: prabinkc/app:v2
+
+    
