@@ -11,7 +11,7 @@ In this project, I will be sharing my experiences, learnings, and experiments wi
 ## Table of Contents
 
 1. [Kubernetes Concept-Pod ReplicaSet Deployment](Flask-Hello-World-Deployment/README.md)
-
+2. [Update and Rollback with Kubernetes Deployment](Update-Rollback/README.md)
 ## Getting Started
 
 To get started with this project, follow these steps:
