@@ -1,6 +1,6 @@
 # Kubernetes Learning Journey
 
-![Kubernetes Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1280px-Kubernetes_logo_without_workmark.svg.png)
+![Kubernetes Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/600px-Kubernetes_logo_without_workmark.svg.png)
 
 Welcome to my Kubernetes Learning Journey! This repository serves as a place to document and showcase everything I learn while exploring the fascinating world of Kubernetes.
 
