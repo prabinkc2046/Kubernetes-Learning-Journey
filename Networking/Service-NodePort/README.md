@@ -28,16 +28,19 @@ spec:
 
 Apply the Pod definition:
 
+```bash
 kubectl create -f hello-world-pod.yaml
+```
+
 Check the status of the Pod:
-
+```bash
 kubectl get pods -o wide
-
+```
 Step 2: Access the Application
 As the Pod is exposed on port 5000, let's try accessing the application:
-
+```bash
 curl http://$(minikube ip):5000
-
+```
 If you encounter a connection refused error, don't worry. We'll resolve this in the next step.
 
 Step 3: Create a Service with NodePort
@@ -62,17 +65,18 @@ spec:
 ```
 
 Apply the Service definition:
-
+```bash
 kubectl create -f hello-world-service.yaml
+```
 Check if the Service is created:
-
+```bash
 kubectl get services
-
+```
 Step 4: Access the Application Again
 Now, let's try accessing the application using the NodePort:
-
+```bash
 curl http://$(minikube ip):30500
-
+```
 You should see "Hello world!" as the response, indicating that the application is accessible.
 
 # Conclusion
