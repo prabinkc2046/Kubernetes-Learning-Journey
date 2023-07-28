@@ -12,7 +12,7 @@ In this project, I will be sharing my experiences, learnings, and experiments wi
 
 1. [Kubernetes Concept-Pod ReplicaSet Deployment](Flask-Hello-World-Deployment/.)
 2. [Update and Rollback with Kubernetes Deployment](Update-Rollback/.)
-3. [Networking Service with NodePort](Networking/Service/.)
+3. [Networking Service with NodePort](Networking/Service-NodePort/.)
 ## Getting Started
 
 To get started with this project, follow these steps:
