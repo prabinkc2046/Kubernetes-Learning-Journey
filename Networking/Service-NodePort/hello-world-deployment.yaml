@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  selector:
+    matchLabels:
+      app: hello-world
+      type: front-end
+  replicas: 10
+  template:
+    metadata:
+      name: hello-world
+      labels:
+        app: hello-world
+        type: front-end
+    spec:
+      containers:
+        - name: hello-world
+          image: prabinkc/app:v3
+
+    
