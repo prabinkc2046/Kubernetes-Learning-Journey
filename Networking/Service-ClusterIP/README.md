@@ -156,7 +156,7 @@ minikube service frontend
 ```
 You should see:
 
-![Screenshot: Accessing Web Server](./Networking/Service-ClusterIP/Screenshot-accessing%20web%20server.png)
+![Screenshot: Accessing Web Server](./Screenshot-accessing%20web%20server.png)
 
 This opened a browser displaying the frontend application served by Nginx, which communicated with the backend Flask server through the Kubernetes Service flask-service.
 
