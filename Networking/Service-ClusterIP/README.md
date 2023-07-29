@@ -11,7 +11,7 @@ cd Backend-Image-Creation
 docker build -t prabinkc/backend .
 docker push prabinkc/backend
 ```
-inplace of prabinkc, use your username for Docker Hub.
+**inplace of prabinkc, use your username for Docker Hub.
 
 ### Frontend Image
 Next, I built a Docker image for the frontend Nginx web server. This image handles the frontend presentation and serves as the entry point for user interactions.
@@ -20,28 +20,35 @@ cd Frontend-Image-Creation
 docker build -t prabinkc/frontend .
 docker push prabinkc/frontend
 ```
-inplace of prabinkc, use your username for Docker Hub.
+**inplace of prabinkc, use your username for Docker Hub.
 
 ## Docker Implementation of the Stack Application
 In this stage, I implemented the stack application using Docker, orchestrating the communication between the frontend and backend containers.
 
-Set up Docker on the local environment.
+1. Set up Docker.
 
-Created a Docker network named frontend-backend-network to enable communication between the frontend and backend containers.
+2. Create a network for the frontend and backend to communicate:
 
-Deployed the backend Flask server as a Docker container with the name flask-server on the frontend-backend-network.
-
+```bash
+docker network create frontend-backend-network
 ```
+
+Deploy the backend Flask server and check the logs:
+
+```bash
 docker run -d --name flask-server --network frontend-backend-network prabinkc/backend
 ```
 ```
 docker logs -f flask-server
 ```
-Deployed the frontend Nginx web server as a Docker container named frontend. This container is exposed on port 80 and linked to the frontend-backend-network.
-```
+
+Deploy the frontend Nginx web server:
+```bash
 docker run -d --name frontend -p 80:80 --network frontend-backend-network prabinkc/frontend
 ```
-Accessing the application by navigating to http://localhost in a web browser. This should display the frontend application served by Nginx, which communicates with the backend Flask server.
+
+Access the application by navigating to http://localhost in your web browser. You should see the frontend application served by Nginx, communicating with the backend Flask server.
+
 
 ## Kubernetes Implementation of the Stack Application
 Having understood the Docker implementation, I decided to leverage the power of Kubernetes to manage and scale the application effectively.
@@ -51,7 +58,6 @@ Set up Minikube on my local machine to create a local Kubernetes cluster.
 Created a Kubernetes Service named flask-server for the backend Flask server. This service uses ClusterIP to provide an internal IP address for communication within the cluster.
 
 ```yaml
-Copy code
 apiVersion: v1
 kind: Service
 metadata:
@@ -67,7 +73,7 @@ spec:
 ```
 Deployed the backend Flask server as a Kubernetes Deployment named backend-flask. This ensures that the specified number of replicas (in this case, 10) are maintained.
 
-``yaml
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
