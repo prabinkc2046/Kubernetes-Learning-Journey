@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-server
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5000 # frontend tries to connect to http://flask-server:5000
+      targetPort: 5000 # container is exposed to port 5000
+  selector:
+    app: backend-flask-pod
+    type: backend
+

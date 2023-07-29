@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: frontend-pod
+      type: frontend
+  template:
+    metadata:
+      name: frontend-pod
+      labels:
+        app: frontend-pod
+        type: frontend
+    spec:
+      containers:
+        - name: frontend-container
+          image: prabinkc/frontend
+          ports:
+            - containerPort: 80
+  
