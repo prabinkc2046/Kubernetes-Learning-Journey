@@ -11,7 +11,7 @@ cd Backend-Image-Creation
 docker build -t prabinkc/backend .
 docker push prabinkc/backend
 ```
-**inplace of prabinkc, use your username for Docker Hub.
+**Inplace of prabinkc, use your username for Docker Hub.**
 
 ### Frontend Image
 Next, I built a Docker image for the frontend Nginx web server. This image handles the frontend presentation and serves as the entry point for user interactions.
@@ -20,7 +20,7 @@ cd Frontend-Image-Creation
 docker build -t prabinkc/frontend .
 docker push prabinkc/frontend
 ```
-**inplace of prabinkc, use your username for Docker Hub.
+**Inplace of prabinkc, use your username for Docker Hub.**
 
 ## Docker Implementation of the Stack Application
 In this stage, I implemented the stack application using Docker, orchestrating the communication between the frontend and backend containers.
@@ -96,7 +96,6 @@ spec:
           image: prabinkc/backend
           ports:
             - containerPort: 5000
-
 ```
 
 Created a Kubernetes Service named frontend for the frontend Nginx web server. This service uses NodePort to make the application accessible externally.
@@ -117,8 +116,8 @@ spec:
     type: frontend
 ```
 Deployed the frontend Nginx web server as a Kubernetes Deployment named frontend. Similar to the backend deployment, this ensures the specified number of replicas (10 in this case) are maintained.
-```
-yaml
+
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
