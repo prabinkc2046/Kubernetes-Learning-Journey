@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shapetracker-flask-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: app
+  template:
+    metadata:
+      name: shapetracker-flask-server
+      labels:
+        tier: app
+    spec:
+      containers:
+        - name: shapetracker-flask-server
+          image: prabinkc/shapetracker-flask-server
+          ports:
+            - containerPort: 5000
+
+    

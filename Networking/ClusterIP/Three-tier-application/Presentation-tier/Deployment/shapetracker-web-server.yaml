@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shapetracker-web-server
+spec:
+  selector:
+    matchLabels:
+      tier: presentation
+  template:
+    metadata:
+      name: shapetracker-web-server
+      labels:
+        tier: presentation
+    spec:
+      containers:
+        - name: shapetracker-web-server
+          image: prabinkc/shapetracker-web-server
+          ports:
+            - containerPort: 80
