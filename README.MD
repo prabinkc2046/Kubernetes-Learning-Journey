@@ -12,8 +12,10 @@ In this project, I will be sharing my experiences, learnings, and experiments wi
 
 1. [Kubernetes Concept-Pod ReplicaSet Deployment](Flask-Hello-World-Deployment/.)
 2. [Update and Rollback with Kubernetes Deployment](Update-Rollback/.)
-3. [Networking Service with NodePort](Networking/Service-NodePort/.)
-4. [Networking Service with ClusterIP](Networking/Service-ClusterIP)
+3. [Networking with Service Type- NodePort](Networking/Service-NodePort/.)
+4. [Networking  with ClusterIP - Two-tier-application](Networking/ClusterIP/Two-tier-application/.)
+5. [Networking  with ClusterIP - Three-tier-application](Networking/ClusterIP/Three-tier-application/.)
+
 ## Getting Started
 
 To get started with this project, follow these steps:
