@@ -15,7 +15,7 @@ In this project, I will be sharing my experiences, learnings, and experiments wi
 3. [Networking with Service Type- NodePort](Networking/Service-NodePort/.)
 4. [Networking  with ClusterIP - Two-tier-application](Networking/ClusterIP/Two-tier-application/.)
 5. [Networking  with ClusterIP - Three-tier-application](Networking/ClusterIP/Three-tier-application/.)
-
+6. [Networking with LoadBalancer - Thee-tier-application - deploying on Linode](Networking/LoadBalancer/Three-tier-application/.)
 ## Getting Started
 
 To get started with this project, follow these steps:
