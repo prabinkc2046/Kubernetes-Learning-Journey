@@ -1,5 +1,4 @@
 # Kubernetes Learning Journey: Deploying a Three-Tier Application on Linode
-![Kubernetes Logo (Small Size)](https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo-small.png)
 
 Welcome to my Kubernetes learning journey! In this demo, I'll walk you through the steps to deploy a three-tier application on Linode and access it using a LoadBalancer. The main objective of this project is to showcase how to set up a Kubernetes cluster and deploy a multi-tier application.
 
